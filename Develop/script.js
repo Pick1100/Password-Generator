@@ -16,10 +16,12 @@ function writePassword() {
   var special = window.confirm("Would you like special letters?");
   var password = generatePassword();  
   var passwordText = document.querySelector("#password");
-
-  
+  var passwordString = ""
   if (!lowercase && !uppercase && !numeric && !special){
     window.alert("Please select at least one password modifier")
+  }
+  if (charLength <8){
+    window.alert("Please select at least 8 total characters")
   }
   console.log(charLength, lowercase, lowercase, uppercase, numeric, special);
   passwordText.value = password;
@@ -28,18 +30,18 @@ function generatePassword() {
   for (let i = 0; i < charLength; i++) {
     const element = array[i];
     while (lowercase == true) {
-      String.fromCharCode(lowercaseChar);
+      String.passwordString(lowercaseChar);
     }
     while (uppercase == true) {
-      String.fromCharCode(uppercaseChar);
+      String.passwordString(uppercaseChar);
     }
     while (numeric == true) {
-      String.fromCharCode(numericChar);
+      String.passwordString(numericChar);
     }
     while (special == true) {
-      String.fromCharCode(specialChar);
+      String.passwordString(specialChar);
     }
-    return Math.random(fromCharCode);
+    return Math.random(fromCharCode) = password++;
 }
     
   }
