@@ -36,9 +36,10 @@ function writePassword() {
     passwordArray.push(specialChar)
   }
 console.log(passwordArray);
-
-while ((let i = 0), i >= charLength){
+let i = 0;
+while (i >= charLength){
   Math.random(passwordArray) = password[i];
+  i++;
 }  
 }
  
