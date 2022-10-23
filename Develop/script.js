@@ -43,9 +43,9 @@ while (i >= charLength){
 }  
 }
  
-console.log(charLength, lowercase, lowercase, uppercase, numeric, special);
+console.log(charLength, lowercase, uppercase, numeric, special);
 
-}
+
 // function generatePassword() {
 //     while (lowercase == true) {
 //       String.passwordString(lowercaseChar);
