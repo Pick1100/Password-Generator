@@ -6,6 +6,7 @@ var numericChar = [0,1, 2, 3, 4, 5, 6, 7, 8, 9];
 var specialChar = ["!", "@", "#", "$", "%", "*", "(", ")", "-"];
 var password = "" ;
 var charLength = 0;
+var passwordArray = [];
 
 // Write password to the #password input
 function writePassword() {
@@ -14,7 +15,6 @@ function writePassword() {
   var uppercase = window.confirm("Would you like uppercase letters?");
   var numeric = window.confirm("Would you like numbers?");
   var special = window.confirm("Would you like special letters?");
-  var password = generatePassword();  
   var passwordText = document.querySelector("#password");
   var passwordString = ""
   if (!lowercase && !uppercase && !numeric && !special){
@@ -23,33 +23,49 @@ function writePassword() {
   if (charLength <8){
     window.alert("Please select at least 8 total characters")
   }
-  console.log(charLength, lowercase, lowercase, uppercase, numeric, special);
-  passwordText.value = password;
-}
-function generatePassword() {
-  for (let i = 0; i < charLength; i++) {
-    const element = array[i];
-    while (lowercase == true) {
-      String.passwordString(lowercaseChar);
-    }
-    while (uppercase == true) {
-      String.passwordString(uppercaseChar);
-    }
-    while (numeric == true) {
-      String.passwordString(numericChar);
-    }
-    while (special == true) {
-      String.passwordString(specialChar);
-    }
-    return Math.random(fromCharCode) = password++;
-}
-    
+  if (uppercase){
+    passwordArray.push(uppercaseChar)  
   }
+  if (lowercase){
+    passwordArray.push(lowercaseChar)
+  }
+  if (numeric){
+    passwordArray.push(numericChar)
+  } 
+  if (special){
+    passwordArray.push(specialChar)
+  }
+console.log(passwordArray);
+
+while ((let i = 0), i >= charLength){
+  Math.random(passwordArray) = password[i];
+}  
+}
+ 
+console.log(charLength, lowercase, lowercase, uppercase, numeric, special);
+
+}
+// function generatePassword() {
+//     while (lowercase == true) {
+//       String.passwordString(lowercaseChar);
+//     }
+//     while (uppercase == true) {
+//       String.passwordString(uppercaseChar);
+//     }
+//     while (numeric == true) {
+//       String.passwordString(numericChar);
+//     }
+//     while (special == true) {
+//       String.passwordString(specialChar);
+//     }
+//     return Math.random(fromCharCode) = password++;
+// }
+// }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-/*WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria */
-/*  Random char picker using math. random and an index, 
-run based on the length of password using a for loop charLength i= 0 */
+// /*WHEN I click the button to generate a password
+// THEN I am presented with a series of prompts for password criteria */
+// /*  Random char picker using math. random and an index, 
+// run based on the length of password using a for loop charLength i= 0 */
