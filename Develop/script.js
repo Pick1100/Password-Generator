@@ -37,14 +37,12 @@ function writePassword() {
   }
 console.log(passwordArray);
 let i = 0;
-while (i >= charLength){
-  Math.random(passwordArray) = password[i];
+while (i > charLength){
+   password[i]= passwordArray[Math.random * passwordArray.length] ;
   i++;
+  // console.log(charLength, lowercase, uppercase, numeric, special);
 }  
 }
- 
-console.log(charLength, lowercase, uppercase, numeric, special);
-
 
 // function generatePassword() {
 //     while (lowercase == true) {
