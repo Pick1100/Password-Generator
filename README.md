@@ -1,3 +1,5 @@
+
+
 # 03 JavaScript: Password Generator
 
 ## Your Task
@@ -98,3 +100,73 @@ You are required to submit the following for review:
 
 - - -
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+
+t also needs quotes
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+
+6:36
+document.querySelector("#password")
+6:36
+var password = document.querySelector("#password")
+password.textContent = password.toString()
+6:36
+I forgot passwordArray isnt the final password my fault
+6:37
+Oh
+6:37
+something I just noticed was on line 7 password isn't an array
+6:38
+so instead of doing password[i] = passwordArray[Math.random() * passwordArray.length] ;
+6:38
+you can just do the += operator
+6:38
+password += passwordArray[Math.random() * passwordArray.length] ;
+6:39
+It'll just concatenate it to the end of the string
+6:39
+var passwordBox = document.querySelector("#password")
+passwordBox.textContent = password
+6:39
+Sorry if that's confusing
+
+
+Ben Orlowski
+  6:40 PM
+Ok, I am reading this, a few times.
+So what you are saying, the password generator is creating an array, and in orderr to do something with the array I need to password.textContent = password.toString()
+:bust_in_silhouette:
+abradshaw
+APP  6:40 PM
+Here let me see if I can explain it better
+6:41
+The password generator makes a passwordArray that you are accessing values of on line 41 with the Math.random function
+6:42
+you're trying to do password[i] but that is unnecessary
+6:42
+All you need to do is password
+6:42
+As for the assignment operator
+6:42
+it needs to be changed to a += to concatenate whatever passwordArray[Math.random * passwordArray.length] generates
+6:42
+Lastly,
+6:43
+to display the final generated password you need to access the textarea
+6:43
+you're accomplishing this with the query selector
+New
+6:44
+Once you access the textarea you have to set the textContent of the area to the final password
+6:44
+And I changed the variable to passwordBox because you already have a var password
+6:44
+var passwordBox = document.querySelector("#password")
+passwordBox.textContent = password
+6:46
+Does that make more sense?

@@ -7,7 +7,8 @@ var specialChar = ["!", "@", "#", "$", "%", "*", "(", ")", "-"];
 var password = "" ;
 var charLength = 0;
 var passwordArray = [];
-
+var passwordBox = document.querySelector("#password");
+passwordBox.textContent = password
 // Write password to the #password input
 function writePassword() {
   var charLength = window.prompt("How long would you like your password It must be between 8 and 128 characters.")
@@ -38,8 +39,9 @@ function writePassword() {
 console.log(passwordArray);
 let i = 0;
 while (i > charLength){
-   password[i]= passwordArray[Math.random * passwordArray.length] ;
+  password += passwordArray[Math.random() * passwordArray.length] ;
   i++;
+  passwordBox.textContent = password;
   // console.log(charLength, lowercase, uppercase, numeric, special);
 }  
 }
